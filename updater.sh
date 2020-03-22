@@ -47,4 +47,5 @@ cat $TMP | \
     'split("\n") | .[1:] | map(split(",")) | .[] | select(.[0]!="" and .[1]!="") | 
     "\"\(.[0])\":\(.[1])"' > iana_protocols.yaml
 
+gzip -9 iana* iana_service_catalog.gz
 exit $?
