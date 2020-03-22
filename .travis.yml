@@ -3,7 +3,7 @@ branches:
   only:
     - master # build master branch only
 script:
-  - ./updater.sh
+  - chmod +x updater.sh && ./updater.sh
 deploy:
   provider: releases
   api_key: $GH_TOKEN
